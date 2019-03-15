@@ -1,6 +1,5 @@
 import { Head } from "mdx-deck";
 export { future as theme } from "mdx-deck/themes";
-import { LiveCode } from "./Code";
 
 <Head>
     <title>Knowledge 1 🤯</title>
@@ -10,12 +9,14 @@ import { LiveCode } from "./Code";
 
 ---
 
-export default LiveCode;
+import Code from "mdx-code";
+
+# Live Code
+
+---
+
+export default Code;
 
 ```javascript A playground slide!
 console.log("Hello world");
 ```
-
----
-
-# The end
