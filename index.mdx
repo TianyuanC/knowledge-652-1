@@ -47,7 +47,7 @@ import { SplitRight } from "mdx-deck/layouts";
 
 export default SplitRight;
 
-![](./img/myread.png)
+![](https://raw.githubusercontent.com/TianyuanC/knowledge-652-1/master/img/myread.png)
 
 ## [Repo](https://github.com/udacity/reactnd-project-myreads-starter)
 
@@ -64,7 +64,7 @@ export default SplitRight;
 # FAQ review
 
 -   ES6
--   Editor: VSCode
+-   Editor: Sublime
 -   Terminals
 -   Git
 
@@ -75,14 +75,14 @@ import Code from "mdx-code";
 # ES6
 
 -   Map
--   Filter
 -   Reduce
+-   Filter
 
 ---
 
 export default Code;
 
-```javascript Map
+```javascript Array.prototype.Map
 const counts = [1, 2, 3];
 console.log(counts);
 // [1, 2, 3]
@@ -94,9 +94,95 @@ console.log(countsDouble);
 
 ---
 
+export default Code;
+
+```javascript Array.prototype.Reduce
+const counts = [1, 2, 3];
+console.log(`1 + 2 + 3 = ${1 + 2 + 3}`);
+// 6
+
+const sum = counts.reduce((acc, count) => acc + count);
+console.log(sum);
+// 6
+
+const sumObj = counts.reduce((acc, count) => ({ output: acc.output + count }), {
+    output: 0
+});
+console.log(sumObj);
+// { output: 6 }
+```
+
+---
+
+export default Code;
+
+```javascript Softmax
+/** e.g.
+ * given softmax([1,2,3])
+ * returns
+ * e_sum = e^1 + e^2 + e^3
+ * [e^1 / e_sum, e^2 / e_sum, e^3 / e_sum]
+ */
+function softmax(inputs) {
+    const eSum = inputs.reduce((acc, input) => acc + Math.exp(input));
+    return inputs.map(input => Math.exp(input) / eSum);
+}
+
+const inputs = [1, 2, 3];
+const outputs = softmax(inputs);
+console.log(outputs);
+```
+
+---
+
+export default Code;
+
+```javascript Array.prototype.Filter
+const counts = [1, 2, 3];
+console.log(counts);
+// [1,2,3]
+
+const odd = counts.filter(count => count % 2 == 1);
+console.log(odd);
+// [1,3]
+```
+
+---
+
 # ES6
 
 ## Arrow Functions
+
+---
+
+export default Code;
+
+```javascript Convert to Arrow Functions
+const fn_0 = function() {};
+fn_0();
+
+const fn_1 = function(a) {
+    console.log(a);
+};
+fn_1(1);
+
+const fn_2 = function(a, b) {
+    return a + b;
+};
+console.log(fn_2(1, 2));
+
+const fn_3 = function(a) {
+    return { a };
+};
+console.log(fn_3(1));
+
+const fn_4 = function(a) {
+    return function(b) {
+        return Math.pow(a, b);
+    };
+};
+console.log(fn_4(2)(3));
+```
 
 ---
 
@@ -106,11 +192,56 @@ console.log(countsDouble);
 
 ---
 
+export default Code;
+
+```javascript Promise chaining
+setTimeout(function() {
+    console.log("2s");
+}, 2000);
+
+const delay = t =>
+    new Promise(resolve =>
+        setTimeout(() => {
+            console.log(`waited for ${(t * 1.0) / 1000}s`);
+            resolve();
+        }, t)
+    );
+// delay(1000)
+//     .then(() => delay(1500))
+//     .then(() => console.log(`done`));
+```
+
+---
+
+export default Code;
+
+```javascript Promise batching
+const delay = t =>
+    new Promise(resolve =>
+        setTimeout(() => {
+            console.log(`waited for ${(t * 1.0) / 1000}s`);
+            resolve();
+        }, t)
+    );
+
+Promise.all([delay(1000), delay(1500), delay(2000)]).then(() => {
+    console.log("done");
+});
+
+// Promise.race([delay(1000), delay(1500), delay(2000)]).then(() => {
+//     console.log("done");
+// });
+```
+
+---
+
 # There must be questions 🤣
 
 ---
 
-# My VSCode
+# My Sublime
+
+### Demo
 
 ---
 
@@ -120,6 +251,8 @@ console.log(countsDouble);
 
 # Terminal basics
 
+### Demo
+
 ---
 
 # All good?
@@ -127,6 +260,8 @@ console.log(countsDouble);
 ---
 
 # Git intro
+
+### Demo
 
 ---
 
@@ -139,7 +274,7 @@ console.log(countsDouble);
 -   React Dev Tools
 -   MyRead
 -   ES6
--   Editor: VSCode
+-   Editor: Sublime
 -   Terminal
 -   Git
 
