@@ -17,4 +17,4 @@ It may become the topics of our next knowledge webinar
 
 [Slides](https://tianyuanc.github.io/knowledge-652-1/#0)
 
-[Video](https://youtu.be/NjgyenpVnw0?t=21)
+[Video](https://tianyuanc.github.io/knowledge-652-1/#31)
