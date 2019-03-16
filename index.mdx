@@ -11,21 +11,27 @@ export { future as theme } from "mdx-deck/themes";
 
 # Announcement
 
----
-
 import { Appear } from "mdx-deck";
 
-<ul>
-    <Appear>
-        <li>Calendly</li>
-        <li>Slack app</li>
-        <li>MyReads</li>
-    </Appear>
-</ul>
+<Appear>
+    <h2>Calendly</h2>
+    <h2>Slack app</h2>
+    <h2>MyReads</h2>
+</Appear>
 
 ---
 
 # React Dev Tools
+
+---
+
+import { Image } from "mdx-deck";
+
+<Image src="./img/react_dev.png" />
+
+---
+
+<Image src="./img/react_org.png" />
 
 ---
 
@@ -34,6 +40,20 @@ import { Appear } from "mdx-deck";
 ---
 
 # MyReads
+
+---
+
+import { SplitRight } from "mdx-deck/layouts";
+
+export default SplitRight;
+
+![](./img/myread.png)
+
+## [Repo](https://github.com/udacity/reactnd-project-myreads-starter)
+
+## [Postman](https://www.getpostman.com/)
+
+## [Books_API](https://reactnd-books-api.udacity.com)
 
 ---
 
